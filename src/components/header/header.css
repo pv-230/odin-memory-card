@@ -22,6 +22,7 @@
   grid-column: 3 / 4;
   justify-self: end;
   width: 64px;
+  height: 64px;
   border-radius: 10px;
 }
 
