@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'normalize.css';
 import './app.css';
 import Header from '../header/header.jsx';
+import Main from '../main/main.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
       {loading && <div className="spinner">Loading</div>}
       <div className={appClassName}>
         <Header />
+        <Main />
       </div>
     </>
   );
