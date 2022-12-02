@@ -1,0 +1,14 @@
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 300px;
+}
+
+.scoreboard__current-score {
+  font-size: 1.75rem;
+}
