@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './gameboard.css';
 import CARD_DATA from './cardData';
+import Card from '../card/card.jsx';
 
 function Gameboard() {
   const [cardOrder, setCardOrder] = useState([...Array(16).keys()]);
@@ -11,9 +12,12 @@ function Gameboard() {
       {cardOrder.map((value) => {
         const currentCard = CARD_DATA[value];
         return (
-          <div className="card" key={currentCard.id}>
-            {currentCard.description}
-          </div>
+          <Card
+            key={currentCard.id}
+            id={currentCard.id}
+            imgPath={currentCard.imgPath}
+            description={currentCard.description}
+          />
         );
       })}
     </div>

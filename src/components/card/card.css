@@ -1,0 +1,20 @@
+:root {
+  --card-width: 200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: var(--card-width);
+  height: 250px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.card:hover {
+  outline: 2px solid blue;
+  cursor: pointer;
+}

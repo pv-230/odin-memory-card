@@ -1,4 +1,7 @@
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, var(--card-width));
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
 }
