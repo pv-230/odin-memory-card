@@ -4,12 +4,10 @@ import './gameboard.css';
 import CARD_DATA from './cardData';
 import Card from '../card/card.jsx';
 
-const CARD_COUNT = 12;
-
 function Gameboard(props) {
-  const { incrementCurrentScore, resetCurrentScore } = props;
+  const { cardCount, incrementScore, resetCurrentScore } = props;
 
-  const [cardOrder, setCardOrder] = useState([...Array(CARD_COUNT).keys()]);
+  const [cardOrder, setCardOrder] = useState([...Array(cardCount).keys()]);
   const [selections, setSelections] = useState([]);
 
   /**
@@ -18,7 +16,7 @@ function Gameboard(props) {
   useEffect(() => {
     const newCardOrder = [...cardOrder];
 
-    for (let i = CARD_COUNT - 1; i > 0; i -= 1) {
+    for (let i = cardCount - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
       [newCardOrder[i], newCardOrder[j]] = [newCardOrder[j], newCardOrder[i]];
     }
@@ -39,7 +37,7 @@ function Gameboard(props) {
         resetCurrentScore();
       } else {
         newSelections.push(id);
-        incrementCurrentScore();
+        incrementScore();
       }
 
       setSelections(newSelections);
@@ -66,7 +64,8 @@ function Gameboard(props) {
 }
 
 Gameboard.propTypes = {
-  incrementCurrentScore: PropTypes.func.isRequired,
+  cardCount: PropTypes.number.isRequired,
+  incrementScore: PropTypes.func.isRequired,
   resetCurrentScore: PropTypes.func.isRequired,
 };
 

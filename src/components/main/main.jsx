@@ -6,12 +6,21 @@ import Gameboard from '../gameboard/gameboard.jsx';
 function Main() {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const CARD_COUNT = 12;
 
   /**
    * Increments the current score by one.
    */
-  const incrementCurrentScore = useCallback(() => {
-    setCurrentScore(currentScore + 1);
+  const incrementScore = useCallback(() => {
+    const newCurrentScore = currentScore + 1;
+    let newHighScore = highScore;
+
+    if (newCurrentScore > highScore) {
+      newHighScore = newCurrentScore;
+    }
+
+    setCurrentScore(newCurrentScore);
+    setHighScore(newHighScore);
   }, [currentScore, setCurrentScore]);
 
   /**
@@ -23,9 +32,10 @@ function Main() {
 
   return (
     <main className="main">
-      <Scoreboard currentScore={currentScore} highScore={highScore} />
+      <Scoreboard cardCount={CARD_COUNT} currentScore={currentScore} highScore={highScore} />
       <Gameboard
-        incrementCurrentScore={incrementCurrentScore}
+        cardCount={CARD_COUNT}
+        incrementScore={incrementScore}
         resetCurrentScore={resetCurrentScore}
       />
     </main>
