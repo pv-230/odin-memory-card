@@ -1,7 +1,11 @@
+:root {
+  --gameboard-grid-gap: 10px;
+}
+
 .gameboard {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 10px;
+  gap: var(--gameboard-grid-gap);
 }
 
 @media screen and (max-width: 870px) {

@@ -6,7 +6,7 @@
   gap: 20px;
   border: 1px solid black;
   padding: 20px;
-  width: 300px;
+  width: calc(var(--card-width) * 2 + var(--gameboard-grid-gap));
 }
 
 .scoreboard__current-score {
