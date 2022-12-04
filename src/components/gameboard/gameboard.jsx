@@ -3,7 +3,7 @@ import './gameboard.css';
 import CARD_DATA from './cardData';
 import Card from '../card/card.jsx';
 
-const CARD_COUNT = 16;
+const CARD_COUNT = 12;
 
 function Gameboard() {
   const [cardOrder, setCardOrder] = useState([...Array(CARD_COUNT).keys()]);

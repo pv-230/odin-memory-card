@@ -1,7 +1,11 @@
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(auto-fill, var(--card-width));
-  width: 100%;
-  justify-content: center;
+  grid-template-columns: repeat(4, auto);
   gap: 10px;
+}
+
+@media screen and (max-width: 870px) {
+  .gameboard {
+    grid-template-columns: repeat(2, auto);
+  }
 }
