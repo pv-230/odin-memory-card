@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import './gameboard.css';
 import CARD_DATA from './cardData';
 import Card from '../card/card.jsx';
 
 const CARD_COUNT = 12;
 
-function Gameboard() {
+function Gameboard(props) {
+  const { incrementCurrentScore, resetCurrentScore } = props;
+
   const [cardOrder, setCardOrder] = useState([...Array(CARD_COUNT).keys()]);
   const [selections, setSelections] = useState([]);
 
@@ -33,8 +36,10 @@ function Gameboard() {
       if (selections.includes(id)) {
         // Reset selections if duplicate card was clicked
         newSelections = [];
+        resetCurrentScore();
       } else {
         newSelections.push(id);
+        incrementCurrentScore();
       }
 
       setSelections(newSelections);
@@ -60,6 +65,9 @@ function Gameboard() {
   );
 }
 
-Gameboard.propTypes = {};
+Gameboard.propTypes = {
+  incrementCurrentScore: PropTypes.func.isRequired,
+  resetCurrentScore: PropTypes.func.isRequired,
+};
 
 export default Gameboard;
