@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'normalize.css';
 import './app.css';
 import Header from '../header/header.jsx';
@@ -31,9 +31,9 @@ function App() {
   /**
    * Toggles the display of the help modal.
    */
-  const toggleHelpModal = useCallback(() => {
+  function toggleHelpModal() {
     setShowHelp(!showHelp);
-  });
+  }
 
   return (
     <>

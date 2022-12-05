@@ -11,8 +11,9 @@
   },
   "plugins": ["react"],
   "rules": {
-    "no-console": "off",
+    "no-console": 0,
     "import/extensions": [2, "never", { "jsx": "always" }],
-    "jsx-a11y/label-has-associated-control": [1, { "assert": "either" }]
+    "jsx-a11y/label-has-associated-control": [1, { "assert": "either" }],
+    "react/jsx-no-bind": 0
   }
 }

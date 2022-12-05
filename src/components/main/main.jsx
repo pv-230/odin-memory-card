@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './main.css';
 import Scoreboard from '../scoreboard/scoreboard.jsx';
@@ -14,7 +14,7 @@ function Main(props) {
   /**
    * Increments the current score by one.
    */
-  const incrementScore = useCallback(() => {
+  function incrementScore() {
     const newCurrentScore = currentScore + 1;
     let newHighScore = highScore;
 
@@ -24,14 +24,14 @@ function Main(props) {
 
     setCurrentScore(newCurrentScore);
     setHighScore(newHighScore);
-  }, [currentScore, setCurrentScore]);
+  }
 
   /**
    * Resets the current score.
    */
-  const resetCurrentScore = useCallback(() => {
+  function resetCurrentScore() {
     setCurrentScore(0);
-  }, [currentScore, setCurrentScore]);
+  }
 
   return (
     <main className={showHelp ? 'main blurred' : 'main'}>

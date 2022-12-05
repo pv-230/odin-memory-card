@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './gameboard.css';
 import CARD_DATA from './cardData';
@@ -27,23 +27,20 @@ function Gameboard(props) {
   /**
    * Event handler for card selection.
    */
-  const handleCardSelect = useCallback(
-    (id) => {
-      let newSelections = [...selections];
+  function handleCardSelect(id) {
+    let newSelections = [...selections];
 
-      if (selections.includes(id)) {
-        // Reset selections if duplicate card was clicked
-        newSelections = [];
-        resetCurrentScore();
-      } else {
-        newSelections.push(id);
-        incrementScore();
-      }
+    if (selections.includes(id)) {
+      // Reset selections if duplicate card was clicked
+      newSelections = [];
+      resetCurrentScore();
+    } else {
+      newSelections.push(id);
+      incrementScore();
+    }
 
-      setSelections(newSelections);
-    },
-    [selections, setSelections]
-  );
+    setSelections(newSelections);
+  }
 
   return (
     <div className="gameboard">
