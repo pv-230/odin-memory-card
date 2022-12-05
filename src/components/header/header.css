@@ -18,15 +18,21 @@
   font-size: 3rem;
 }
 
-.header__help-icon {
+.header__help-btn {
   grid-column: 3 / 4;
   justify-self: end;
   width: 64px;
   height: 64px;
-  border-radius: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
-.header__help-icon:hover {
+.header__help-btn:hover {
   background-color: var(--help-icon-hover-color);
-  cursor: pointer;
+}
+
+.header__help-icon {
+  width: 100%;
+  height: 100%;
 }
