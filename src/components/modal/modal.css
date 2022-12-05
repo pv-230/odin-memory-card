@@ -10,7 +10,6 @@
 }
 
 .modal {
-  width: 75%;
   border: 1px solid black;
   background-color: #eee;
 }
@@ -19,12 +18,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5px;
   padding: 5px;
   background-color: var(--header-bg-color);
 }
 
 .modal__title {
   font-size: 1.5rem;
+}
+
+.modal__close-btn {
+  width: 24px;
+  height: 24px;
 }
 
 .modal__children-wrapper {

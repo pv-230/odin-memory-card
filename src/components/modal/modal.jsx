@@ -9,7 +9,7 @@ function Modal(props) {
     <div className="modal-background">
       <div className="modal">
         <div className="modal__title-bar">
-          <div className="modal__title">{title}</div>
+          <span className="modal__title">{title}</span>
           <button className="modal__close-btn" type="button" onClick={handleClose}>
             X
           </button>
