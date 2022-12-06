@@ -1,21 +1,18 @@
-:root {
-  --header-bg-color: rgba(128, 128, 128, 0.5);
-  --help-icon-hover-color: rgba(128, 128, 128, 0.75);
-}
-
 .header {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 64px 1fr 64px;
   justify-items: center;
   align-items: center;
   padding: 10px;
-  background-color: var(--header-bg-color);
+  background-color: var(--dark-bg-color);
+  color: var(--light-text-color);
 }
 
 .header__title {
   grid-column: 2 / 3;
   margin: 0;
   font-size: 3rem;
+  user-select: none;
 }
 
 .header__help-btn {
@@ -30,7 +27,7 @@
 }
 
 .header__help-btn:hover {
-  background-color: var(--help-icon-hover-color);
+  background-color: var(--light-hover-color);
 }
 
 .header__help-icon {

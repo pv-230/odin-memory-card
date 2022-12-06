@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 20px;
   font-size: 1.25rem;
+  color: var(--dark-text-color);
 }
 
 .help-modal p {

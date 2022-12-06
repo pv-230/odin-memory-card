@@ -8,7 +8,7 @@ function Header(props) {
 
   return (
     <header className="header">
-      <h1 className="header__title">Memory Game</h1>
+      <h1 className="header__title">Animal Cards</h1>
       <button className="header__help-btn" type="button" onClick={toggleHelpModal}>
         <img className="header__help-icon" src={HelpIcon} alt="Help icon" />
       </button>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './scoreboard.css';
 
 function Scoreboard(props) {
-  const { cardCount, currentScore, highScore, gameOver, resetGame } = props;
+  const { currentScore, highScore, gameOver, resetGame } = props;
 
   return (
     <div className="scoreboard">
@@ -16,12 +16,8 @@ function Scoreboard(props) {
         </>
       ) : (
         <>
-          <div className="scoreboard__current-score">
-            Current score: {currentScore}/{cardCount}
-          </div>
-          <div className="scoreboard__high-score">
-            High score: {highScore}/{cardCount}
-          </div>
+          <div className="scoreboard__current-score">Current score: {currentScore}</div>
+          <div className="scoreboard__high-score">High score: {highScore}</div>
         </>
       )}
     </div>
@@ -29,7 +25,6 @@ function Scoreboard(props) {
 }
 
 Scoreboard.propTypes = {
-  cardCount: PropTypes.number.isRequired,
   currentScore: PropTypes.number.isRequired,
   highScore: PropTypes.number.isRequired,
   gameOver: PropTypes.bool.isRequired,

@@ -15,7 +15,11 @@ function Card(props) {
       disabled={gameOver}
     >
       <figure className="card__figure">
-        <img className="card__image" src={imgPath} alt={name} />
+        <img
+          className={gameOver ? 'card__image grayscale' : 'card__image'}
+          src={imgPath}
+          alt={name}
+        />
         <figcaption>
           <b>{name}</b>
           <br />

@@ -13,7 +13,7 @@ function HelpModal(props) {
           The goal of the game is to click on all of the cards <strong>once</strong>.
         </p>
         <p>The cards will be shuffled each time a card is clicked.</p>
-        <p>Your current score represents how many unique cards have been clicked in a row.</p>
+        <p>Your current score represents how many unique cards have been clicked.</p>
       </div>
     </Modal>
   );

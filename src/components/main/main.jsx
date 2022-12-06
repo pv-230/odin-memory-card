@@ -8,7 +8,7 @@ function Main(props) {
   const CARD_COUNT = 12;
   const { showHelp } = props;
 
-  const [currentScore, setCurrentScore] = useState(0);
+  const [currentScore, setCurrentScore] = useState(11);
   const [highScore, setHighScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
@@ -41,7 +41,6 @@ function Main(props) {
   return (
     <main className={showHelp ? 'main blurred' : 'main'}>
       <Scoreboard
-        cardCount={CARD_COUNT}
         currentScore={currentScore}
         highScore={highScore}
         gameOver={gameOver}

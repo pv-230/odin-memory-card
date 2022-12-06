@@ -1,3 +1,14 @@
+:root {
+  --light-text-color: #eee;
+  --dark-text-color: #111;
+  --light-bg-color: #eee;
+  --dark-bg-color: #222;
+  --light-hover-color: #333;
+  --dark-hover-color: #111;
+  --light-border-color: #eee;
+  --dark-border-color: #111;
+}
+
 *,
 *::before,
 *::after {
@@ -14,6 +25,7 @@ body,
   flex: 1;
   display: flex;
   font-family: sans-serif;
+  background-color: var(--light-bg-color);
 }
 
 .app {
