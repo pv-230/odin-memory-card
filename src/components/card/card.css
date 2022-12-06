@@ -21,6 +21,10 @@
   padding: 10px 0;
 }
 
+.card__figure i {
+  font-size: 0.8rem;
+}
+
 .card__image {
   width: 180px;
   height: 180px;
