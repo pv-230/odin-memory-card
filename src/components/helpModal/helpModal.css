@@ -1,3 +1,11 @@
 .help-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   font-size: 1.25rem;
+}
+
+.help-modal p {
+  margin: 0;
 }

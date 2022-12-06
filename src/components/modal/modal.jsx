@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './modal.css';
+import close from './close.svg';
 
 function Modal(props) {
   const { title, handleClose } = props;
@@ -11,7 +12,7 @@ function Modal(props) {
         <div className="modal__title-bar">
           <span className="modal__title">{title}</span>
           <button className="modal__close-btn" type="button" onClick={handleClose}>
-            X
+            <img className="modal__close-icon" src={close} alt="Close help window" />
           </button>
         </div>
         <div className="modal__children-wrapper">
