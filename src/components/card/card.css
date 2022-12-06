@@ -14,7 +14,10 @@
   border: 1px solid black;
 }
 
-.card:hover {
+.card:hover:not(.card.disabled) {
   outline: 2px solid blue;
-  cursor: pointer;
+}
+
+.card.disabled {
+  cursor: initial;
 }

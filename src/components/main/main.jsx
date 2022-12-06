@@ -10,20 +10,16 @@ function Main(props) {
 
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
   /**
-   * Increments the current score by one.
+   * Increments the current score by one and adjusts the high score and game over status if needed.
    */
   function incrementScore() {
-    const newCurrentScore = currentScore + 1;
-    let newHighScore = highScore;
-
-    if (newCurrentScore > highScore) {
-      newHighScore = newCurrentScore;
-    }
-
-    setCurrentScore(newCurrentScore);
-    setHighScore(newHighScore);
+    const newScore = currentScore + 1;
+    setCurrentScore(newScore);
+    if (newScore > highScore) setHighScore(newScore);
+    if (newScore === 12) setGameOver(true);
   }
 
   /**
@@ -33,13 +29,29 @@ function Main(props) {
     setCurrentScore(0);
   }
 
+  /**
+   * Resets the game.
+   */
+  function resetGame() {
+    setCurrentScore(0);
+    setHighScore(0);
+    setGameOver(false);
+  }
+
   return (
     <main className={showHelp ? 'main blurred' : 'main'}>
-      <Scoreboard cardCount={CARD_COUNT} currentScore={currentScore} highScore={highScore} />
+      <Scoreboard
+        cardCount={CARD_COUNT}
+        currentScore={currentScore}
+        highScore={highScore}
+        gameOver={gameOver}
+        resetGame={resetGame}
+      />
       <Gameboard
         cardCount={CARD_COUNT}
         incrementScore={incrementScore}
         resetCurrentScore={resetCurrentScore}
+        gameOver={gameOver}
       />
     </main>
   );

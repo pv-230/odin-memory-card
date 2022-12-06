@@ -7,8 +7,26 @@
   border: 1px solid black;
   padding: 20px;
   width: calc(var(--card-width) * 2 + var(--gameboard-grid-gap));
+  height: 140px;
 }
 
 .scoreboard__current-score {
   font-size: 1.75rem;
+}
+
+.scoreboard__win-text {
+  font-size: 2rem;
+}
+
+.scoreboard__reset-btn {
+  color: #eee;
+  background-color: rgb(68, 68, 224);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+
+.scoreboard__reset-btn:hover {
+  background-color: rgb(57, 57, 185);
 }
