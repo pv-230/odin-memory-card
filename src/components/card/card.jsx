@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './card.css';
+import CARD_DATA from './cardData';
 
 function Card(props) {
-  const { id, imgPath, description, handleCardSelect, gameOver } = props;
+  const { order, handleCardSelect, gameOver } = props;
+  const { id, imgPath, description } = CARD_DATA[order];
 
   return (
     <button
@@ -19,9 +21,7 @@ function Card(props) {
 }
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
-  imgPath: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  order: PropTypes.number.isRequired,
   handleCardSelect: PropTypes.func.isRequired,
   gameOver: PropTypes.bool.isRequired,
 };

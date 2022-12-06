@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './gameboard.css';
-import CARD_DATA from './cardData';
 import Card from '../card/card.jsx';
 
 function Gameboard(props) {
@@ -55,19 +54,9 @@ function Gameboard(props) {
 
   return (
     <div className="gameboard">
-      {cardOrder.map((value) => {
-        const currentCard = CARD_DATA[value];
-        return (
-          <Card
-            key={currentCard.id}
-            id={currentCard.id}
-            imgPath={currentCard.imgPath}
-            description={currentCard.description}
-            handleCardSelect={handleCardSelect}
-            gameOver={gameOver}
-          />
-        );
-      })}
+      {cardOrder.map((value) => (
+        <Card key={value} order={value} gameOver={gameOver} handleCardSelect={handleCardSelect} />
+      ))}
     </div>
   );
 }
