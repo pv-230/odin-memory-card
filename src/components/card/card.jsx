@@ -5,7 +5,7 @@ import CARD_DATA from './cardData';
 
 function Card(props) {
   const { order, handleCardSelect, gameOver } = props;
-  const { id, imgPath, description } = CARD_DATA[order];
+  const { id, imgPath, name, binomial } = CARD_DATA[order];
 
   return (
     <button
@@ -14,8 +14,14 @@ function Card(props) {
       type="button"
       disabled={gameOver}
     >
-      <img className="card__image" src={imgPath} alt={`Card ${id}`} />
-      <span className="card__description">{description}</span>
+      <figure>
+        <img className="card__image" src={imgPath} alt={name} />
+        <figcaption>
+          <b>{name}</b>
+          <br />
+          <i>{binomial}</i>
+        </figcaption>
+      </figure>
     </button>
   );
 }

@@ -1,8 +1,13 @@
+import kingfisher from '../../assets/kingfisher.webp';
+
 const CARD_DATA = [
   {
     id: 1,
-    imgPath: null,
-    description: 'First card',
+    imgPath: kingfisher,
+    name: 'Collared kingfisher',
+    binomial: 'Todiramphus chloris',
+    attribution:
+      'https://freevintageillustrations.com/white-collared-kingfisher-bird-vintage-illustration/',
   },
   {
     id: 2,
