@@ -4,6 +4,7 @@ import bullfrog from '../../assets/bullfrog.webp';
 import shrew from '../../assets/shrew.webp';
 import brill from '../../assets/brill.webp';
 import eel from '../../assets/eel.webp';
+import gurnard from '../../assets/gurnard.webp';
 
 const CARD_DATA = [
   {
@@ -53,8 +54,10 @@ const CARD_DATA = [
   },
   {
     id: 7,
-    imgPath: null,
-    description: 'Seventh card',
+    imgPath: gurnard,
+    name: 'Armed gurnard',
+    binomial: 'Peristedion cataphractum',
+    attribution: 'https://freevintageillustrations.com/armed-gurnard-vintage-illustration/',
   },
   {
     id: 8,
