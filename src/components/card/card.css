@@ -21,8 +21,14 @@
   padding: 10px 0;
 }
 
+.card__figure b {
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+
 .card__figure i {
   font-size: 0.8rem;
+  font-style: italic;
 }
 
 .card__image {

@@ -5,6 +5,11 @@ import shrew from '../../assets/shrew.webp';
 import brill from '../../assets/brill.webp';
 import eel from '../../assets/eel.webp';
 import gurnard from '../../assets/gurnard.webp';
+import cobra from '../../assets/cobra.webp';
+import lizard from '../../assets/lizard.webp';
+import owl from '../../assets/owl.webp';
+import puffin from '../../assets/puffin.webp';
+import turtle from '../../assets/turtle.webp';
 
 const CARD_DATA = [
   {
@@ -61,48 +66,41 @@ const CARD_DATA = [
   },
   {
     id: 8,
-    imgPath: null,
-    description: 'Eighth card',
+    imgPath: lizard,
+    name: 'Armadillo girdled lizard',
+    binomial: 'Ouroborus cataphractus',
+    attribution:
+      'https://freevintageillustrations.com/armadillo-girdled-lizard-cordylus-cataphractus-vintage-illustration/',
   },
   {
     id: 9,
-    imgPath: null,
-    description: 'Ninth card',
+    imgPath: cobra,
+    name: 'Snouted cobra',
+    binomial: 'Naja annulifera',
+    attribution:
+      'https://freevintageillustrations.com/snouted-cobra-naia-haje-1-vintage-illustration/',
   },
   {
     id: 10,
-    imgPath: null,
-    description: 'Tenth card',
+    imgPath: owl,
+    name: 'Barn owl',
+    binomial: 'Tyto alba',
+    attribution: 'https://freevintageillustrations.com/barn-owl/',
   },
   {
     id: 11,
-    imgPath: null,
-    description: 'Eleventh card',
+    imgPath: puffin,
+    name: 'Atlantic puffin',
+    binomial: 'Fratercula arctica',
+    attribution: 'https://freevintageillustrations.com/northern-puffin-2/',
   },
   {
     id: 12,
-    imgPath: null,
-    description: 'Twelveth card',
-  },
-  {
-    id: 13,
-    imgPath: null,
-    description: 'Thirteenth card',
-  },
-  {
-    id: 14,
-    imgPath: null,
-    description: 'Fourteenth card',
-  },
-  {
-    id: 15,
-    imgPath: null,
-    description: 'Fifteenth card',
-  },
-  {
-    id: 16,
-    imgPath: null,
-    description: 'Sixteenth card',
+    imgPath: turtle,
+    name: 'Serrated hinged terrapin',
+    binomial: 'Pelusios sinuatus',
+    attribution:
+      'https://freevintageillustrations.com/serrated-hinged-terrapin-stenotherus-sinuatus-vintage-illustration/',
   },
 ];
 
