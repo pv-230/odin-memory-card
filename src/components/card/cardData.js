@@ -1,15 +1,15 @@
-import kingfisher from '../../assets/kingfisher.webp';
-import deerhound from '../../assets/deerhound.webp';
-import bullfrog from '../../assets/bullfrog.webp';
-import shrew from '../../assets/shrew.webp';
-import brill from '../../assets/brill.webp';
-import eel from '../../assets/eel.webp';
-import gurnard from '../../assets/gurnard.webp';
-import cobra from '../../assets/cobra.webp';
-import lizard from '../../assets/lizard.webp';
-import owl from '../../assets/owl.webp';
-import puffin from '../../assets/puffin.webp';
-import turtle from '../../assets/turtle.webp';
+import kingfisher from './images/kingfisher.webp';
+import deerhound from './images/deerhound.webp';
+import bullfrog from './images/bullfrog.webp';
+import shrew from './images/shrew.webp';
+import brill from './images/brill.webp';
+import eel from './images/eel.webp';
+import gurnard from './images/gurnard.webp';
+import cobra from './images/cobra.webp';
+import lizard from './images/lizard.webp';
+import owl from './images/owl.webp';
+import puffin from './images/puffin.webp';
+import turtle from './images/turtle.webp';
 
 const CARD_DATA = [
   {
