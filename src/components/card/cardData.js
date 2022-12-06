@@ -1,28 +1,39 @@
 import kingfisher from '../../assets/kingfisher.webp';
+import deerhound from '../../assets/deerhound.webp';
+import bullfrog from '../../assets/bullfrog.webp';
+import shrew from '../../assets/shrew.webp';
 
 const CARD_DATA = [
   {
     id: 1,
     imgPath: kingfisher,
-    name: 'Collared kingfisher',
+    name: 'Collared Kingfisher',
     binomial: 'Todiramphus chloris',
     attribution:
       'https://freevintageillustrations.com/white-collared-kingfisher-bird-vintage-illustration/',
   },
   {
     id: 2,
-    imgPath: null,
-    description: 'Second card',
+    imgPath: deerhound,
+    name: 'Scottish Deerhound',
+    binomial: 'Canis familiaris',
+    attribution: 'https://freevintageillustrations.com/deerhound-dog-illustration-by-vero-shaw/',
   },
   {
     id: 3,
-    imgPath: null,
-    description: 'Third card',
+    imgPath: bullfrog,
+    name: 'African Bullfrog',
+    binomial: 'Macroscelides brachvrhynchus',
+    attribution:
+      'https://freevintageillustrations.com/african-bullfrog-pyxocephalus-adspersus-vintage-illustration/',
   },
   {
     id: 4,
-    imgPath: null,
-    description: 'Fourth card',
+    imgPath: shrew,
+    name: 'Elephant Shrew',
+    binomial: 'Macroscelides edwardii',
+    attribution:
+      'https://freevintageillustrations.com/elephant-shrew-macroscelides-edwardii-vintage-illustration/',
   },
   {
     id: 5,
