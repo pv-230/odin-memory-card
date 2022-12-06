@@ -26,7 +26,8 @@
   padding: 0;
 }
 
-.header__help-btn:hover {
+.header__help-btn:hover,
+.header__help-btn:focus {
   background-color: var(--light-hover-color);
 }
 

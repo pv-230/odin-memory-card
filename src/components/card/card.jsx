@@ -13,6 +13,7 @@ function Card(props) {
       onClick={() => handleCardSelect(id)}
       type="button"
       disabled={gameOver}
+      tabIndex="0"
     >
       <figure className="card__figure">
         <img

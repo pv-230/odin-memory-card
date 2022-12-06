@@ -35,6 +35,7 @@
   font-size: 1.5rem;
 }
 
-.scoreboard__reset-btn:hover {
+.scoreboard__reset-btn:hover,
+.scoreboard__reset-btn:focus {
   background-color: goldenrod;
 }

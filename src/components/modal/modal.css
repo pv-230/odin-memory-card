@@ -39,7 +39,8 @@
   border-radius: 50%;
 }
 
-.modal__close-btn:hover {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
   background-color: var(--light-hover-color);
 }
 

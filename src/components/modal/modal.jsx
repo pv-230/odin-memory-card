@@ -11,7 +11,7 @@ function Modal(props) {
       <div className="modal">
         <div className="modal__title-bar">
           <span className="modal__title">{title}</span>
-          <button className="modal__close-btn" type="button" onClick={handleClose}>
+          <button className="modal__close-btn" type="button" onClick={handleClose} tabIndex="0">
             <img className="modal__close-icon" src={close} alt="Close help window" />
           </button>
         </div>

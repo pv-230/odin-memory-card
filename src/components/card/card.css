@@ -42,13 +42,11 @@
   filter: grayscale(1);
 }
 
-.card:hover:not(.card.disabled) {
-  border: 2px solid red;
+.card:hover:not(.card.disabled),
+.card:focus-within:not(.card.disabled) {
+  border: 2px solid crimson;
   box-shadow: 0 0 10px black;
-}
-
-.card:focus-visible {
-  outline: blue;
+  background-color: var(--light-hover-color);
 }
 
 .card.disabled {
