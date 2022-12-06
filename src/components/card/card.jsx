@@ -14,7 +14,7 @@ function Card(props) {
       type="button"
       disabled={gameOver}
     >
-      <figure>
+      <figure className="card__figure">
         <img className="card__image" src={imgPath} alt={name} />
         <figcaption>
           <b>{name}</b>

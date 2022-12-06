@@ -3,15 +3,27 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   width: var(--card-width);
   height: 250px;
   border: 1px solid black;
   background-color: transparent;
+  padding: 0;
+}
+
+.card__figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.card__image {
+  width: 180px;
+  height: 180px;
 }
 
 .card:hover:not(.card.disabled) {
