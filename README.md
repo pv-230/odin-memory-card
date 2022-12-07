@@ -9,4 +9,6 @@ More information here: https://www.theodinproject.com/lessons/node-path-javascri
 - ESLint
 
 ## Screenshots
-*TODO*
+![First screenshot](/screenshots/screen1.png?raw=true)
+![Second screenshot](/screenshots/screen2.png?raw=true)
+![Third screenshot](/screenshots/screen3.png?raw=true)
