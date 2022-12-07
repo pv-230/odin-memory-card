@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-      {loading && <div className="spinner">Loading</div>}
+      {loading && <div className="spinner" />}
       <div className={appClassName}>
         <Header toggleHelpModal={toggleHelpModal} />
         <div className="main-content">
