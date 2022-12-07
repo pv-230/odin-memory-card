@@ -6,9 +6,9 @@ import Gameboard from '../gameboard/gameboard.jsx';
 
 function Main(props) {
   const CARD_COUNT = 12;
-  const { showHelp } = props;
+  const { showHelp, flashRed } = props;
 
-  const [currentScore, setCurrentScore] = useState(11);
+  const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
@@ -27,6 +27,7 @@ function Main(props) {
    */
   function resetCurrentScore() {
     setCurrentScore(0);
+    flashRed();
   }
 
   /**
@@ -58,6 +59,7 @@ function Main(props) {
 
 Main.propTypes = {
   showHelp: PropTypes.bool.isRequired,
+  flashRed: PropTypes.func.isRequired,
 };
 
 export default Main;

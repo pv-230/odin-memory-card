@@ -9,6 +9,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [appClassName, setAppClassName] = useState('app loading');
   const [showHelp, setShowHelp] = useState(false);
+  const [flash, setFlash] = useState(false);
 
   /**
    * Hides the main content until all resources have loaded.
@@ -29,10 +30,30 @@ function App() {
   }, []);
 
   /**
+   * Flashes the background of the app to red.
+   */
+  useEffect(() => {
+    if (flash) {
+      setAppClassName(`${appClassName} app_red`);
+      setTimeout(() => {
+        setFlash(false);
+        setAppClassName(appClassName.replace(' app_red', ''));
+      }, 300);
+    }
+  }, [flash]);
+
+  /**
    * Toggles the display of the help modal.
    */
   function toggleHelpModal() {
     setShowHelp(!showHelp);
+  }
+
+  /**
+   * Sets the flash state.
+   */
+  function flashRed() {
+    setFlash(true);
   }
 
   return (
@@ -41,7 +62,7 @@ function App() {
       <div className={appClassName}>
         <Header toggleHelpModal={toggleHelpModal} />
         <div className="main-content">
-          <Main showHelp={showHelp} />
+          <Main showHelp={showHelp} flashRed={flashRed} />
           {showHelp && <HelpModal toggleHelpModal={toggleHelpModal} />}
         </div>
       </div>

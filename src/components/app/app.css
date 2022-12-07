@@ -34,10 +34,17 @@ body,
   flex-direction: column;
   transition: opacity 0.5s;
   position: relative;
+  background-color: var(--light-bg-color);
+  transition: background-color 1s;
 }
 
 .app.loading {
   opacity: 0;
+}
+
+.app_red {
+  background-color: darkred;
+  transition: background-color 1s;
 }
 
 .spinner {
