@@ -35,7 +35,7 @@ body,
   transition: opacity 0.5s;
   position: relative;
   background-color: var(--light-bg-color);
-  transition: background-color 1s;
+  transition: background-color 300ms;
 }
 
 .app.loading {
@@ -44,7 +44,12 @@ body,
 
 .app_red {
   background-color: darkred;
-  transition: background-color 1s;
+  transition: background-color 300ms;
+}
+
+.app_green {
+  background-color: green;
+  transition: background-color 300ms;
 }
 
 .main-content {
