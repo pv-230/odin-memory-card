@@ -11,7 +11,7 @@
 .header__title {
   grid-column: 2 / 3;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.75rem;
   user-select: none;
 }
 
@@ -34,4 +34,19 @@
 .header__help-icon {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 560px) {
+  .header {
+    grid-template-columns: 1fr 64px;
+  }
+
+  .header__title {
+    grid-column: 1 / 2;
+    justify-self: start;
+  }
+
+  .header__help-btn {
+    grid-column: 2 / 3;
+  }
 }

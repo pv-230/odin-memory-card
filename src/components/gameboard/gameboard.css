@@ -4,8 +4,14 @@
 
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(6, auto);
   gap: var(--gameboard-grid-gap);
+}
+
+@media screen and (max-width: 1290px) {
+  .gameboard {
+    grid-template-columns: repeat(4, auto);
+  }
 }
 
 @media screen and (max-width: 870px) {
