@@ -36,6 +36,6 @@
 }
 
 .scoreboard__reset-btn:hover,
-.scoreboard__reset-btn:focus {
+.scoreboard__reset-btn:focus-visible {
   background-color: goldenrod;
 }

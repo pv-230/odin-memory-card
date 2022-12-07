@@ -43,7 +43,7 @@
 }
 
 .card:hover:not(.card.disabled),
-.card:focus-within:not(.card.disabled) {
+.card:focus-visible:not(.card.disabled) {
   border: 2px solid crimson;
   box-shadow: 0 0 10px black;
   background-color: var(--light-hover-color);

@@ -27,7 +27,7 @@
 }
 
 .header__help-btn:hover,
-.header__help-btn:focus {
+.header__help-btn:focus-visible {
   background-color: var(--light-hover-color);
 }
 
